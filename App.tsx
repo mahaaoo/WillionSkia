@@ -6,6 +6,8 @@ import HelloWorld from './pages/HelloWord';
 import HelloWorld2 from './pages/HelloWord2';
 import Logo from './pages/Logo';
 import Hue from './pages/Hue';
+import { ReactLogo } from './pages/ReactLogo';
+import { SkiaLogo } from './pages/SkiaLogo';
 
 const Stack = createNativeStackNavigator();
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Stack.Screen name="Hello World2" component={HelloWorld2} />
         <Stack.Screen name="Logo" component={Logo} />
         <Stack.Screen name="Hue" component={Hue} />
+        <Stack.Screen name="ReactLogo" component={ReactLogo} />
+        <Stack.Screen name="SkiaLogo" component={SkiaLogo} />
       </Stack.Navigator>
     </NavigationContainer>
   );
