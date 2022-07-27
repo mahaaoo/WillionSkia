@@ -24,12 +24,12 @@ const Card: React.FC<CardProps> = props => {
 
   const gesture = Gesture.Pan()
   .onBegin(({x,y}) => {
-    rotateX.value = withTiming(interpolate(x, [0, CARD_WIDTH], [10, -10], Extrapolate.CLAMP));
-    rotateY.value = withTiming(interpolate(y, [0, CARD_WIDTH], [-10, 10], Extrapolate.CLAMP));
+    rotateX.value = withTiming(interpolate(y, [0, CARD_WIDTH], [10, -10], Extrapolate.CLAMP));
+    rotateY.value = withTiming(interpolate(x, [0, CARD_HEIGHT], [-10, 10], Extrapolate.CLAMP));
   })
   .onUpdate(({ x, y }) => {
-    rotateX.value = interpolate(x, [0, CARD_WIDTH], [10, -10], Extrapolate.CLAMP);
-    rotateY.value = interpolate(y, [0, CARD_WIDTH], [-10, 10], Extrapolate.CLAMP);
+    rotateX.value = interpolate(y, [0, CARD_WIDTH], [10, -10], Extrapolate.CLAMP);
+    rotateY.value = interpolate(x, [0, CARD_HEIGHT], [-10, 10], Extrapolate.CLAMP);
   })
   .onFinalize(() => {
     rotateX.value = withSpring(0);
