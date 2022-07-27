@@ -3,7 +3,7 @@ import {
   Fill,
   RadialGradient,
   vec,
-  useDerivedValue,
+  useComputedValue,
   mixColors,
 } from "@shopify/react-native-skia";
 import React from "react";
@@ -18,7 +18,7 @@ interface BackgroundProps {
 }
 
 export const Background = ({ progress }: BackgroundProps) => {
-  const colors = useDerivedValue(
+  const colors = useComputedValue(
     () => [mixColors(progress?.current ?? 1, "#040404", "#303030"), "#040404"],
     [progress]
   );
