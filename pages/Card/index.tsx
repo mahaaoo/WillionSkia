@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Dimensions} from 'react-native';
-import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler';
+import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import Animated, { Extrapolate, interpolate, useAnimatedStyle, useSharedValue, withSpring, withTiming } from 'react-native-reanimated';
 
 import BackgroundGradient from './BackgroundGradient';
